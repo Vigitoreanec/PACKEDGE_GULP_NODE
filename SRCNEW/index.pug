@@ -1,0 +1,15 @@
+extend _includes/layout.pug
+block init
+  - const pageID = 0
+block content 
+  h1 Главная
+  - let colors = [`Red`,'Orange','Yellow','Green ','Blue','Indigo','Violet'];
+  ul.rainbow
+    each color in colors
+      li= color 
+  button(onclick="sayHello(event)") Привет!!!!!
+block scripts
+  script(src="script.js") 
+
+    
+      

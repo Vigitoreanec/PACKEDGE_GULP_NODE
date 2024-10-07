@@ -1,0 +1,22 @@
+$main-text-color: indigo
+$main-background: lightgray
+
+@use '_includes/layout'
+@use '_includes/header'
+
+:root
+  font-size: large
+  font-family: sans-serif
+
+body
+  color: $main-text-color
+
+
+body > aside
+  // float: right
+  background-color: pink
+
+.rainbow
+  @for $n from 0 through 6   
+    li:nth-child(#{$n})  
+      color: hsl($n * calc(360deg / 7), 100%, 50%)
