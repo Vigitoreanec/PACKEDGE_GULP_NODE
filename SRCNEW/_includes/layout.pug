@@ -1,0 +1,16 @@
+include pages
+doctype html 
+html 
+  head
+    block init
+    title= pages[pageID].title
+    link(rel="stylesheet", href="../style.css")
+    block head
+  body
+    include header.pug
+    if pages[pageID].aside
+      aside Дополнительный блок <!-- включается в pages.pug -->
+    main
+      block content
+    include footer.pug
+    block scripts
